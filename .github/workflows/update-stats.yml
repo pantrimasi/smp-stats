@@ -12,6 +12,9 @@
 
 name: Update stats
 
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: "0 * * * *"   # every hour
