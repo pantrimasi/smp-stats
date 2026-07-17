@@ -1,1 +1,86 @@
-{"updated":1784283552229,"totals":{"players":4,"playTimeTicks":287319,"deaths":2023910,"mobKills":149,"distanceCm":9940316969,"blocksMined":1630},"topPlaytime":[{"name":"PantriMasi","playTimeTicks":110928},{"name":"Thanato_phoros","playTimeTicks":96908},{"name":"Luka043","playTimeTicks":78543},{"name":"FrankiePopoki","playTimeTicks":940}]}
+{
+  "updated": "2026-07-17T10:42:43.990164+00:00",
+  "totals": {
+    "playTimeTicks": 287319,
+    "deaths": 2023910,
+    "mobKills": 149,
+    "blocksMined": 1630,
+    "distanceCm": 9940316969
+  },
+  "players": [
+    {
+      "name": "PantriMasi",
+      "playTimeTicks": 110928,
+      "deaths": 5,
+      "mobKills": 58,
+      "playerKills": 5,
+      "blocksMined": 458,
+      "distanceCm": 321851
+    },
+    {
+      "name": "Thanato_phoros",
+      "playTimeTicks": 96908,
+      "deaths": 10,
+      "mobKills": 65,
+      "playerKills": 2,
+      "blocksMined": 435,
+      "distanceCm": 437838
+    },
+    {
+      "name": "Luka043",
+      "playTimeTicks": 78543,
+      "deaths": 2023895,
+      "mobKills": 26,
+      "playerKills": 1,
+      "blocksMined": 729,
+      "distanceCm": 9939555532
+    },
+    {
+      "name": "FrankiePopoki",
+      "playTimeTicks": 940,
+      "deaths": 0,
+      "mobKills": 0,
+      "playerKills": 0,
+      "blocksMined": 8,
+      "distanceCm": 1748
+    }
+  ],
+  "topPlaytime": [
+    {
+      "name": "PantriMasi",
+      "playTimeTicks": 110928,
+      "deaths": 5,
+      "mobKills": 58,
+      "playerKills": 5,
+      "blocksMined": 458,
+      "distanceCm": 321851
+    },
+    {
+      "name": "Thanato_phoros",
+      "playTimeTicks": 96908,
+      "deaths": 10,
+      "mobKills": 65,
+      "playerKills": 2,
+      "blocksMined": 435,
+      "distanceCm": 437838
+    },
+    {
+      "name": "Luka043",
+      "playTimeTicks": 78543,
+      "deaths": 2023895,
+      "mobKills": 26,
+      "playerKills": 1,
+      "blocksMined": 729,
+      "distanceCm": 9939555532
+    },
+    {
+      "name": "FrankiePopoki",
+      "playTimeTicks": 940,
+      "deaths": 0,
+      "mobKills": 0,
+      "playerKills": 0,
+      "blocksMined": 8,
+      "distanceCm": 1748
+    }
+  ]
+}
