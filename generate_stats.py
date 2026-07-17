@@ -19,8 +19,13 @@ damit UUIDs zu Namen aufgeloest werden koennen.
 
 import json
 import sys
+import time
+import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
+
+# Local cache for resolved names
+NAME_CACHE_FILE = Path("uuid-names.json")
 
 # Distance stat keys (cm)
 DISTANCE_KEYS = [
@@ -38,6 +43,28 @@ def load_usercache(server_dir):
         for entry in json.loads(cache_file.read_text(encoding="utf-8")):
             mapping[entry["uuid"].lower()] = entry["name"]
     return mapping
+
+
+def load_name_cache():
+    if NAME_CACHE_FILE.exists():
+        return json.loads(NAME_CACHE_FILE.read_text(encoding="utf-8"))
+    return {}
+
+
+def resolve_name(uuid, cache):
+    """Mojang API lookup for unknown UUIDs."""
+    if uuid in cache:
+        return cache[uuid]
+    url = f"https://sessionserver.mojang.com/session/minecraft/profile/{uuid.replace('-', '')}"
+    try:
+        with urllib.request.urlopen(url, timeout=10) as response:
+            data = json.loads(response.read())
+            name = data.get("name")
+    except Exception:
+        name = None
+    cache[uuid] = name
+    time.sleep(0.5)  # rate limit
+    return name
 
 
 def sum_category(stats, category):
@@ -58,11 +85,12 @@ def main():
         sys.exit(1)
 
     names = load_usercache(world_dir.parent)
+    name_cache = load_name_cache()
     players = []
 
     for stats_file in sorted(stats_dir.glob("*.json")):
         uuid = stats_file.stem.lower()
-        name = names.get(uuid)
+        name = names.get(uuid) or resolve_name(uuid, name_cache)
         if not name:
             # Unknown UUID, skip
             continue
@@ -101,6 +129,7 @@ def main():
     }
 
     out_file.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+    NAME_CACHE_FILE.write_text(json.dumps(name_cache, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"OK: {len(players)} Spieler -> {out_file}")
 
 
