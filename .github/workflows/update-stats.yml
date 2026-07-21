@@ -38,22 +38,26 @@ jobs:
           # The live world is whatever level-name says in server.properties
           ftp_run "get -O . '$SERVER_DIR/server.properties';" || true
           LEVEL=$(grep -E '^level-name=' server.properties 2>/dev/null | cut -d= -f2- | tr -d '\r' || true)
-          echo "level-name aus server.properties: ${LEVEL:-nicht lesbar}"
-
-          STATS_PATH=""
-          if [ -n "$LEVEL" ] && ftp_run "cls -1 '$SERVER_DIR/$LEVEL/stats';" > /dev/null 2>&1; then
-            STATS_PATH="$SERVER_DIR/$LEVEL/stats"
-          else
-            # Fallback: search the whole account, deep enough for world folders
-            echo "Welt nicht direkt gefunden, durchsuche den Server:"
-            ftp_run "find -d 6 .;" > tree.txt
-            sed -n '1,400p' tree.txt
-            STATS_PATH=$(grep -E '/stats/?$' tree.txt | grep -viE 'plugin|update-backup|cache' \
-              | head -1 | sed 's:/$::;s:^\./:/:')
+          if [ -z "$LEVEL" ]; then
+            echo "::error::level-name nicht aus $SERVER_DIR/server.properties lesbar."
+            exit 1
           fi
+          echo "Welt laut server.properties: $LEVEL"
+
+          # Paper 1.21+ keeps the files in players/stats, older builds in stats
+          STATS_PATH=""
+          for CANDIDATE in "$SERVER_DIR/$LEVEL/players/stats" "$SERVER_DIR/$LEVEL/stats"; do
+            if ftp_run "cls -1 '$CANDIDATE';" > /dev/null 2>&1; then
+              STATS_PATH="$CANDIDATE"
+              break
+            fi
+            echo "Nicht vorhanden: $CANDIDATE"
+          done
 
           if [ -z "$STATS_PATH" ]; then
-            echo "::error::Kein stats-Ordner auf dem FTP gefunden. Siehe Ordnerliste oben."
+            echo "Weder players/stats noch stats gefunden, Inhalt der Welt:"
+            ftp_run "find -d 2 '$SERVER_DIR/$LEVEL';" || true
+            echo "::error::Kein Statistik-Ordner in $SERVER_DIR/$LEVEL gefunden."
             exit 1
           fi
 
