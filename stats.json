@@ -1,24 +1,24 @@
 {
-  "updated": "2026-07-21T12:18:17.434835+00:00",
+  "updated": "2026-07-21T14:54:10.375374+00:00",
   "totals": {
-    "playTimeTicks": 507599,
-    "deaths": 246,
+    "playTimeTicks": 540064,
+    "deaths": 278,
     "mobKills": 13,
-    "playerKills": 68,
-    "blocksMined": 36,
-    "blocksPlaced": 2381,
-    "distanceCm": 14804590
+    "playerKills": 85,
+    "blocksMined": 37,
+    "blocksPlaced": 2393,
+    "distanceCm": 15406366
   },
   "players": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 317752,
-      "deaths": 55,
+      "playTimeTicks": 341720,
+      "deaths": 69,
       "mobKills": 10,
-      "playerKills": 51,
-      "blocksMined": 9,
-      "blocksPlaced": 963,
-      "distanceCm": 12139235
+      "playerKills": 63,
+      "blocksMined": 10,
+      "blocksPlaced": 974,
+      "distanceCm": 12591232
     },
     {
       "name": "FrankiePopoki",
@@ -29,6 +29,16 @@
       "blocksMined": 18,
       "blocksPlaced": 1409,
       "distanceCm": 2605781
+    },
+    {
+      "name": "Benson7373",
+      "playTimeTicks": 8497,
+      "deaths": 18,
+      "mobKills": 0,
+      "playerKills": 5,
+      "blocksMined": 0,
+      "blocksPlaced": 1,
+      "distanceCm": 149779
     },
     {
       "name": "Luka043",
@@ -44,13 +54,13 @@
   "topPlaytime": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 317752,
-      "deaths": 55,
+      "playTimeTicks": 341720,
+      "deaths": 69,
       "mobKills": 10,
-      "playerKills": 51,
-      "blocksMined": 9,
-      "blocksPlaced": 963,
-      "distanceCm": 12139235
+      "playerKills": 63,
+      "blocksMined": 10,
+      "blocksPlaced": 974,
+      "distanceCm": 12591232
     },
     {
       "name": "FrankiePopoki",
@@ -61,6 +71,16 @@
       "blocksMined": 18,
       "blocksPlaced": 1409,
       "distanceCm": 2605781
+    },
+    {
+      "name": "Benson7373",
+      "playTimeTicks": 8497,
+      "deaths": 18,
+      "mobKills": 0,
+      "playerKills": 5,
+      "blocksMined": 0,
+      "blocksPlaced": 1,
+      "distanceCm": 149779
     },
     {
       "name": "Luka043",
