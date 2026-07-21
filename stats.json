@@ -1,12 +1,104 @@
 {
-  "updated": "2026-07-21T07:28:48.110488+00:00",
+  "updated": "2026-07-21T09:15:23.846730+00:00",
   "totals": {
-    "playTimeTicks": 0,
-    "deaths": 0,
-    "mobKills": 0,
-    "blocksMined": 0,
-    "distanceCm": 0
+    "playTimeTicks": 71016,
+    "deaths": 6,
+    "mobKills": 23,
+    "blocksMined": 236,
+    "distanceCm": 203233
   },
-  "players": [],
-  "topPlaytime": []
+  "players": [
+    {
+      "name": "PantriMasi",
+      "playTimeTicks": 39721,
+      "deaths": 0,
+      "mobKills": 1,
+      "playerKills": 3,
+      "blocksMined": 49,
+      "distanceCm": 77601
+    },
+    {
+      "name": "Saaabe",
+      "playTimeTicks": 20165,
+      "deaths": 3,
+      "mobKills": 22,
+      "playerKills": 0,
+      "blocksMined": 146,
+      "distanceCm": 79542
+    },
+    {
+      "name": "Luka043",
+      "playTimeTicks": 5444,
+      "deaths": 0,
+      "mobKills": 0,
+      "playerKills": 0,
+      "blocksMined": 40,
+      "distanceCm": 39662
+    },
+    {
+      "name": "ZXQZLOLOLOLOLOLL",
+      "playTimeTicks": 5409,
+      "deaths": 3,
+      "mobKills": 0,
+      "playerKills": 0,
+      "blocksMined": 1,
+      "distanceCm": 6428
+    },
+    {
+      "name": "Tsurika",
+      "playTimeTicks": 277,
+      "deaths": 0,
+      "mobKills": 0,
+      "playerKills": 0,
+      "blocksMined": 0,
+      "distanceCm": 0
+    }
+  ],
+  "topPlaytime": [
+    {
+      "name": "PantriMasi",
+      "playTimeTicks": 39721,
+      "deaths": 0,
+      "mobKills": 1,
+      "playerKills": 3,
+      "blocksMined": 49,
+      "distanceCm": 77601
+    },
+    {
+      "name": "Saaabe",
+      "playTimeTicks": 20165,
+      "deaths": 3,
+      "mobKills": 22,
+      "playerKills": 0,
+      "blocksMined": 146,
+      "distanceCm": 79542
+    },
+    {
+      "name": "Luka043",
+      "playTimeTicks": 5444,
+      "deaths": 0,
+      "mobKills": 0,
+      "playerKills": 0,
+      "blocksMined": 40,
+      "distanceCm": 39662
+    },
+    {
+      "name": "ZXQZLOLOLOLOLOLL",
+      "playTimeTicks": 5409,
+      "deaths": 3,
+      "mobKills": 0,
+      "playerKills": 0,
+      "blocksMined": 1,
+      "distanceCm": 6428
+    },
+    {
+      "name": "Tsurika",
+      "playTimeTicks": 277,
+      "deaths": 0,
+      "mobKills": 0,
+      "playerKills": 0,
+      "blocksMined": 0,
+      "distanceCm": 0
+    }
+  ]
 }
