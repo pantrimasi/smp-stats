@@ -1,4 +1,21 @@
 #!/usr/bin/env python3
+"""Kyros SMP stats generator.
+
+Liest die Vanilla-Statistikdateien der Welt und erzeugt das stats.json,
+das die Webseite laedt (Totals + pro Spieler).
+
+Verwendung:
+  python3 generate_stats.py <weltordner> [ausgabedatei]
+
+Beispiel:
+  python3 generate_stats.py /pfad/zum/server/world stats.json
+
+Danach stats.json ins GitHub-Repo PantriMasi/smp-stats pushen
+(oder direkt per Cronjob/GitHub Action laufen lassen).
+
+Benoetigt: usercache.json im Serverordner (eine Ebene ueber der Welt),
+damit UUIDs zu Namen aufgeloest werden koennen.
+"""
 
 import json
 import sys
@@ -16,6 +33,48 @@ DISTANCE_KEYS = [
     "minecraft:sprint_one_cm",
     "minecraft:crouch_one_cm",
 ]
+
+# Minecraft zaehlt gesetzte Bloecke nicht direkt. Die einzige Quelle ist
+# minecraft:used, das jede Item-Benutzung zaehlt. Hier fliegen die
+# offensichtlichen Nicht-Bloecke raus, damit die Zahl nahe an
+# "gesetzte Bloecke" liegt. Eine Naeherung, kein exakter Wert.
+NON_BLOCK_SUFFIXES = (
+    "_sword", "_pickaxe", "_axe", "_shovel", "_hoe",
+    "_helmet", "_chestplate", "_leggings", "_boots",
+    "_bucket", "_spawn_egg", "_boat", "_minecart",
+    "_horse_armor", "_upgrade_smithing_template",
+)
+
+NON_BLOCK_ITEMS = {
+    "minecraft:bucket", "minecraft:bow", "minecraft:crossbow", "minecraft:arrow",
+    "minecraft:spectral_arrow", "minecraft:tipped_arrow", "minecraft:trident",
+    "minecraft:shield", "minecraft:elytra", "minecraft:fishing_rod",
+    "minecraft:flint_and_steel", "minecraft:shears", "minecraft:spyglass",
+    "minecraft:compass", "minecraft:clock", "minecraft:map", "minecraft:filled_map",
+    "minecraft:book", "minecraft:writable_book", "minecraft:written_book",
+    "minecraft:potion", "minecraft:splash_potion", "minecraft:lingering_potion",
+    "minecraft:experience_bottle", "minecraft:ender_pearl", "minecraft:ender_eye",
+    "minecraft:snowball", "minecraft:egg", "minecraft:firework_rocket",
+    "minecraft:fire_charge", "minecraft:bone_meal", "minecraft:name_tag",
+    "minecraft:lead", "minecraft:saddle", "minecraft:glass_bottle",
+    "minecraft:milk_bucket", "minecraft:honey_bottle", "minecraft:goat_horn",
+    "minecraft:brush", "minecraft:mace", "minecraft:wind_charge",
+}
+
+
+def is_block_item(item_id):
+    """Grobe Unterscheidung Block gegen Werkzeug/Nahrung/Ausruestung."""
+    if item_id in NON_BLOCK_ITEMS:
+        return False
+    if item_id.endswith(NON_BLOCK_SUFFIXES):
+        return False
+    return True
+
+
+def count_placed(stats):
+    """Naeherung fuer gesetzte Bloecke aus minecraft:used."""
+    used = stats.get("minecraft:used", {})
+    return sum(count for item, count in used.items() if is_block_item(item))
 
 
 def load_usercache(server_dir):
@@ -90,6 +149,7 @@ def main():
             "mobKills": custom.get("minecraft:mob_kills", 0),
             "playerKills": custom.get("minecraft:player_kills", 0),
             "blocksMined": sum_category(stats, "minecraft:mined"),
+            "blocksPlaced": count_placed(stats),
             "distanceCm": sum(custom.get(k, 0) for k in DISTANCE_KEYS),
         })
 
@@ -105,6 +165,7 @@ def main():
         "deaths": sum(p["deaths"] for p in players),
         "mobKills": sum(p["mobKills"] for p in players),
         "blocksMined": sum(p["blocksMined"] for p in players),
+        "blocksPlaced": sum(p["blocksPlaced"] for p in players),
         "distanceCm": sum(p["distanceCm"] for p in players),
     }
 
