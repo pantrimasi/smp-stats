@@ -104,10 +104,18 @@ def main():
 
     world_dir = Path(sys.argv[1])
     out_file = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("stats.json")
-    stats_dir = world_dir / "stats"
-    if not stats_dir.is_dir():
-        print(f"Fehler: {stats_dir} nicht gefunden.")
+
+    # Paper 1.21+ uses players/stats, aeltere Versionen stats
+    stats_dir = None
+    for candidate in (world_dir / "players" / "stats", world_dir / "stats", world_dir):
+        if candidate.is_dir() and any(candidate.glob("*.json")):
+            stats_dir = candidate
+            break
+    if stats_dir is None:
+        print(f"Fehler: kein Statistik-Ordner unter {world_dir} gefunden.")
+        print("Erwartet: <welt>/players/stats oder <welt>/stats")
         sys.exit(1)
+    print(f"Lese Statistiken aus: {stats_dir}")
 
     names = load_usercache(world_dir.parent)
     name_cache = load_name_cache()
@@ -147,6 +155,7 @@ def main():
         "playTimeTicks": sum(p["playTimeTicks"] for p in players),
         "deaths": sum(p["deaths"] for p in players),
         "mobKills": sum(p["mobKills"] for p in players),
+        "playerKills": sum(p["playerKills"] for p in players),
         "blocksMined": sum(p["blocksMined"] for p in players),
         "blocksPlaced": sum(p["blocksPlaced"] for p in players),
         "distanceCm": sum(p["distanceCm"] for p in players),
