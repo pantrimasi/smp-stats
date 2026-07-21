@@ -1,21 +1,23 @@
 {
-  "updated": "2026-07-21T09:53:26.978538+00:00",
+  "updated": "2026-07-21T10:03:56.588270+00:00",
   "totals": {
-    "playTimeTicks": 427312,
+    "playTimeTicks": 433266,
     "deaths": 227,
     "mobKills": 11,
     "blocksMined": 36,
-    "distanceCm": 496561
+    "blocksPlaced": 2282,
+    "distanceCm": 499464
   },
   "players": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 237465,
+      "playTimeTicks": 243419,
       "deaths": 36,
       "mobKills": 8,
       "playerKills": 51,
       "blocksMined": 9,
-      "distanceCm": 211803
+      "blocksPlaced": 864,
+      "distanceCm": 214706
     },
     {
       "name": "FrankiePopoki",
@@ -24,6 +26,7 @@
       "mobKills": 3,
       "playerKills": 15,
       "blocksMined": 18,
+      "blocksPlaced": 1409,
       "distanceCm": 268832
     },
     {
@@ -33,18 +36,20 @@
       "mobKills": 0,
       "playerKills": 2,
       "blocksMined": 9,
+      "blocksPlaced": 9,
       "distanceCm": 15926
     }
   ],
   "topPlaytime": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 237465,
+      "playTimeTicks": 243419,
       "deaths": 36,
       "mobKills": 8,
       "playerKills": 51,
       "blocksMined": 9,
-      "distanceCm": 211803
+      "blocksPlaced": 864,
+      "distanceCm": 214706
     },
     {
       "name": "FrankiePopoki",
@@ -53,6 +58,7 @@
       "mobKills": 3,
       "playerKills": 15,
       "blocksMined": 18,
+      "blocksPlaced": 1409,
       "distanceCm": 268832
     },
     {
@@ -62,6 +68,7 @@
       "mobKills": 0,
       "playerKills": 2,
       "blocksMined": 9,
+      "blocksPlaced": 9,
       "distanceCm": 15926
     }
   ]
