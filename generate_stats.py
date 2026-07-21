@@ -1,21 +1,4 @@
 #!/usr/bin/env python3
-"""Kyros SMP stats generator.
-
-Liest die Vanilla-Statistikdateien der Welt und erzeugt das stats.json,
-das die Webseite laedt (Totals + pro Spieler).
-
-Verwendung:
-  python3 generate_stats.py <weltordner> [ausgabedatei]
-
-Beispiel:
-  python3 generate_stats.py /pfad/zum/server/world stats.json
-
-Danach stats.json ins GitHub-Repo PantriMasi/smp-stats pushen
-(oder direkt per Cronjob/GitHub Action laufen lassen).
-
-Benoetigt: usercache.json im Serverordner (eine Ebene ueber der Welt),
-damit UUIDs zu Namen aufgeloest werden koennen.
-"""
 
 import json
 import sys
