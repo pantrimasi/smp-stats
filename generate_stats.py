@@ -1,21 +1,4 @@
 #!/usr/bin/env python3
-"""Kyros SMP stats generator.
-
-Liest die Vanilla-Statistikdateien der Welt und erzeugt das stats.json,
-das die Webseite laedt (Totals + pro Spieler).
-
-Verwendung:
-  python3 generate_stats.py <weltordner> [ausgabedatei]
-
-Beispiel:
-  python3 generate_stats.py /pfad/zum/server/world stats.json
-
-Danach stats.json ins GitHub-Repo PantriMasi/smp-stats pushen
-(oder direkt per Cronjob/GitHub Action laufen lassen).
-
-Benoetigt: usercache.json im Serverordner (eine Ebene ueber der Welt),
-damit UUIDs zu Namen aufgeloest werden koennen.
-"""
 
 import json
 import sys
@@ -109,6 +92,11 @@ def main():
             "blocksMined": sum_category(stats, "minecraft:mined"),
             "distanceCm": sum(custom.get(k, 0) for k in DISTANCE_KEYS),
         })
+
+    # Never overwrite good data with an empty result
+    if not players:
+        print("Fehler: keine Spieler gefunden, stats.json bleibt unveraendert.")
+        sys.exit(1)
 
     players.sort(key=lambda p: p["playTimeTicks"], reverse=True)
 
