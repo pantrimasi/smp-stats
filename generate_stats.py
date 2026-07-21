@@ -10,12 +10,18 @@ from pathlib import Path
 # Local cache for resolved names
 NAME_CACHE_FILE = Path("uuid-names.json")
 
-# Distance stat keys (cm)
-DISTANCE_KEYS = [
-    "minecraft:walk_one_cm",
-    "minecraft:sprint_one_cm",
-    "minecraft:crouch_one_cm",
-]
+# Minecraft legt jede Fortbewegungsart als eigenen Wert ab, alle enden
+# auf _one_cm: walk, sprint, crouch, swim, fly, aviate (Elytra),
+# minecart, boat, horse, pig, strider, climb, fall und was kuenftig
+# dazukommt. Statt einer festen Liste wird das Suffix ausgewertet,
+# damit neue Versionen automatisch mitgezaehlt werden.
+DISTANCE_SUFFIX = "_one_cm"
+
+
+def count_distance(custom):
+    """Summe aller zurueckgelegten Distanzen in cm."""
+    return sum(value for key, value in custom.items()
+               if key.endswith(DISTANCE_SUFFIX))
 
 # Minecraft zaehlt gesetzte Bloecke nicht direkt. Die einzige Quelle ist
 # minecraft:used, das jede Item-Benutzung zaehlt. Hier fliegen die
@@ -141,7 +147,7 @@ def main():
             "playerKills": custom.get("minecraft:player_kills", 0),
             "blocksMined": sum_category(stats, "minecraft:mined"),
             "blocksPlaced": count_placed(stats),
-            "distanceCm": sum(custom.get(k, 0) for k in DISTANCE_KEYS),
+            "distanceCm": count_distance(custom),
         })
 
     # Never overwrite good data with an empty result
