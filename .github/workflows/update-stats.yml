@@ -8,6 +8,11 @@ on:
     - cron: "0 * * * *"   # every hour
   workflow_dispatch:        # manual run
 
+# Nie zwei Laeufe gleichzeitig, sonst schreiben beide auf main
+concurrency:
+  group: update-stats
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -109,4 +114,21 @@ jobs:
           git add stats.json uuid-names.json
           git diff --cached --quiet && echo "Keine Aenderung" && exit 0
           git commit -m "Stats update $(date -u +'%Y-%m-%d %H:%M')"
-          git push
+
+          # Kam in der Zwischenzeit ein fremder Commit dazu, wird neu
+          # aufgesetzt. Die Statistikdateien werden bei jedem Lauf
+          # komplett neu erzeugt, unsere Version gewinnt darum.
+          for TRY in 1 2 3; do
+            if git push; then
+              echo "Gepusht im Versuch $TRY"
+              exit 0
+            fi
+            echo "Push abgelehnt, hole Remote-Stand (Versuch $TRY)"
+            git pull --rebase -X theirs origin main || {
+              git rebase --abort || true
+              exit 1
+            }
+          done
+
+          echo "::error::Push nach drei Versuchen fehlgeschlagen."
+          exit 1
