@@ -1,14 +1,3 @@
-# GitHub Action fuer das Repo PantriMasi/smp-stats
-#
-# Einrichtung:
-# 1. Diese Datei im Repo ablegen als: .github/workflows/update-stats.yml
-# 2. generate_stats.py (aus dem tools-Ordner der Webseite) ins Repo-Root legen
-# 3. Im Repo: Settings -> Secrets and variables -> Actions -> New repository secret
-#    Name: FTP_PASSWORD, Wert: dein ZAP-FTP-Passwort
-# 4. Unter "Actions" den Workflow einmal manuell starten (Run workflow) zum Testen
-#
-# Hinweis: Falls der FTP-Login direkt im Ordner g586731 landet,
-# unten die Pfade von /g586731/paperspigot/... auf /paperspigot/... kuerzen.
 
 name: Update stats
 
@@ -30,24 +19,75 @@ jobs:
       - name: Install lftp
         run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
 
-      - name: Download stats via FTP
+      - name: Find stats folder on the server
+        id: locate
         env:
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         run: |
-          mkdir -p world/stats
+          set -euo pipefail
+
           lftp -u "g586731,$FTP_PASSWORD" ftp://134.255.225.150 -e "
             set ssl:verify-certificate no;
             set net:timeout 20;
-            mirror --only-newer /g586731/paperspigot/Parody/stats world/stats;
-            get -O . /g586731/paperspigot/usercache.json;
+            find -d 4 .;
+            bye
+          " > tree.txt
+
+          echo "Ordnerstruktur des Servers (gekuerzt):"
+          sed -n '1,200p' tree.txt
+
+          # Any folder called stats that belongs to a world, not to a plugin
+          STATS_PATH=$(grep -E '/stats/?$' tree.txt | grep -vi 'plugin' | head -1 | sed 's:/$::')
+          if [ -z "$STATS_PATH" ]; then
+            echo "::error::Kein stats-Ordner auf dem FTP gefunden. Siehe Ordnerliste oben."
+            exit 1
+          fi
+
+          USERCACHE=$(grep -E 'usercache\.json$' tree.txt | head -1 || true)
+          echo "Gefunden: $STATS_PATH"
+          echo "Usercache: ${USERCACHE:-nicht gefunden}"
+          echo "stats_path=$STATS_PATH" >> "$GITHUB_OUTPUT"
+          echo "usercache=$USERCACHE" >> "$GITHUB_OUTPUT"
+
+      - name: Download stats via FTP
+        env:
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          STATS_PATH: ${{ steps.locate.outputs.stats_path }}
+          USERCACHE: ${{ steps.locate.outputs.usercache }}
+        run: |
+          set -euo pipefail
+          mkdir -p world/stats
+
+          lftp -u "g586731,$FTP_PASSWORD" ftp://134.255.225.150 -e "
+            set ssl:verify-certificate no;
+            set net:timeout 20;
+            set cmd:fail-exit yes;
+            mirror --only-newer '$STATS_PATH' world/stats;
             bye
           "
+
+          if [ -n "$USERCACHE" ]; then
+            lftp -u "g586731,$FTP_PASSWORD" ftp://134.255.225.150 -e "
+              set ssl:verify-certificate no;
+              set net:timeout 20;
+              get -O . '$USERCACHE';
+              bye
+            " || echo "Warnung: usercache.json nicht ladbar, Namen kommen ueber die Mojang-API."
+          fi
+
+          COUNT=$(find world/stats -name '*.json' | wc -l)
+          echo "Heruntergeladene Statistikdateien: $COUNT"
+          if [ "$COUNT" -eq 0 ]; then
+            echo "::error::Keine Statistikdateien geladen, Abbruch."
+            exit 1
+          fi
 
       - name: Generate stats.json
         run: python3 generate_stats.py world stats.json
 
       - name: Commit if changed
         run: |
+          set -euo pipefail
           git config user.name "stats-bot"
           git config user.email "actions@github.com"
           git add stats.json uuid-names.json
