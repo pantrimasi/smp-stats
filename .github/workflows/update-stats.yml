@@ -1,4 +1,3 @@
-
 name: Update stats
 
 permissions:
@@ -23,31 +22,44 @@ jobs:
         id: locate
         env:
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          SERVER_DIR: /g586731/paperspigot
         run: |
           set -euo pipefail
 
-          lftp -u "g586731,$FTP_PASSWORD" ftp://134.255.225.150 -e "
-            set ssl:verify-certificate no;
-            set net:timeout 20;
-            find -d 4 .;
-            bye
-          " > tree.txt
+          ftp_run() {
+            lftp -u "g586731,$FTP_PASSWORD" ftp://134.255.225.150 -e "
+              set ssl:verify-certificate no;
+              set net:timeout 20;
+              $1
+              bye
+            "
+          }
 
-          echo "Ordnerstruktur des Servers (gekuerzt):"
-          sed -n '1,200p' tree.txt
+          # The live world is whatever level-name says in server.properties
+          ftp_run "get -O . '$SERVER_DIR/server.properties';" || true
+          LEVEL=$(grep -E '^level-name=' server.properties 2>/dev/null | cut -d= -f2- | tr -d '\r' || true)
+          echo "level-name aus server.properties: ${LEVEL:-nicht lesbar}"
 
-          # Any folder called stats that belongs to a world, not to a plugin
-          STATS_PATH=$(grep -E '/stats/?$' tree.txt | grep -vi 'plugin' | head -1 | sed 's:/$::')
+          STATS_PATH=""
+          if [ -n "$LEVEL" ] && ftp_run "cls -1 '$SERVER_DIR/$LEVEL/stats';" > /dev/null 2>&1; then
+            STATS_PATH="$SERVER_DIR/$LEVEL/stats"
+          else
+            # Fallback: search the whole account, deep enough for world folders
+            echo "Welt nicht direkt gefunden, durchsuche den Server:"
+            ftp_run "find -d 6 .;" > tree.txt
+            sed -n '1,400p' tree.txt
+            STATS_PATH=$(grep -E '/stats/?$' tree.txt | grep -viE 'plugin|update-backup|cache' \
+              | head -1 | sed 's:/$::;s:^\./:/:')
+          fi
+
           if [ -z "$STATS_PATH" ]; then
             echo "::error::Kein stats-Ordner auf dem FTP gefunden. Siehe Ordnerliste oben."
             exit 1
           fi
 
-          USERCACHE=$(grep -E 'usercache\.json$' tree.txt | head -1 || true)
-          echo "Gefunden: $STATS_PATH"
-          echo "Usercache: ${USERCACHE:-nicht gefunden}"
+          echo "Statistik-Ordner: $STATS_PATH"
           echo "stats_path=$STATS_PATH" >> "$GITHUB_OUTPUT"
-          echo "usercache=$USERCACHE" >> "$GITHUB_OUTPUT"
+          echo "usercache=$SERVER_DIR/usercache.json" >> "$GITHUB_OUTPUT"
 
       - name: Download stats via FTP
         env:
