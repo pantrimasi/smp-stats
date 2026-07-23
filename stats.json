@@ -1,24 +1,24 @@
 {
-  "updated": "2026-07-23T16:26:12.425740+00:00",
+  "updated": "2026-07-23T17:21:55.469342+00:00",
   "totals": {
-    "playTimeTicks": 1187136,
-    "deaths": 317,
-    "mobKills": 215,
-    "playerKills": 91,
-    "blocksMined": 38,
-    "blocksPlaced": 2513,
-    "distanceCm": 22236350
+    "playTimeTicks": 1278242,
+    "deaths": 346,
+    "mobKills": 224,
+    "playerKills": 102,
+    "blocksMined": 39,
+    "blocksPlaced": 2524,
+    "distanceCm": 23058349
   },
   "players": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 963941,
-      "deaths": 106,
-      "mobKills": 211,
-      "playerKills": 65,
+      "playTimeTicks": 1007183,
+      "deaths": 117,
+      "mobKills": 214,
+      "playerKills": 69,
       "blocksMined": 10,
-      "blocksPlaced": 1025,
-      "distanceCm": 19105212
+      "blocksPlaced": 1027,
+      "distanceCm": 19466693
     },
     {
       "name": "FrankiePopoki",
@@ -29,6 +29,16 @@
       "blocksMined": 18,
       "blocksPlaced": 1409,
       "distanceCm": 2605781
+    },
+    {
+      "name": "GameMaster187",
+      "playTimeTicks": 47864,
+      "deaths": 18,
+      "mobKills": 6,
+      "playerKills": 7,
+      "blocksMined": 1,
+      "blocksPlaced": 9,
+      "distanceCm": 460518
     },
     {
       "name": "Benson7373",
@@ -54,13 +64,13 @@
   "topPlaytime": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 963941,
-      "deaths": 106,
-      "mobKills": 211,
-      "playerKills": 65,
+      "playTimeTicks": 1007183,
+      "deaths": 117,
+      "mobKills": 214,
+      "playerKills": 69,
       "blocksMined": 10,
-      "blocksPlaced": 1025,
-      "distanceCm": 19105212
+      "blocksPlaced": 1027,
+      "distanceCm": 19466693
     },
     {
       "name": "FrankiePopoki",
@@ -71,6 +81,16 @@
       "blocksMined": 18,
       "blocksPlaced": 1409,
       "distanceCm": 2605781
+    },
+    {
+      "name": "GameMaster187",
+      "playTimeTicks": 47864,
+      "deaths": 18,
+      "mobKills": 6,
+      "playerKills": 7,
+      "blocksMined": 1,
+      "blocksPlaced": 9,
+      "distanceCm": 460518
     },
     {
       "name": "Benson7373",
