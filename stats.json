@@ -1,24 +1,24 @@
 {
-  "updated": "2026-07-29T07:39:09.160954+00:00",
+  "updated": "2026-07-29T10:27:50.296715+00:00",
   "totals": {
-    "playTimeTicks": 1960579,
+    "playTimeTicks": 1961238,
     "deaths": 693,
     "mobKills": 232,
     "playerKills": 268,
     "blocksMined": 55,
     "blocksPlaced": 3059,
-    "distanceCm": 35031903
+    "distanceCm": 35044619
   },
   "players": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 1535094,
+      "playTimeTicks": 1535753,
       "deaths": 260,
       "mobKills": 219,
       "playerKills": 129,
       "blocksMined": 13,
       "blocksPlaced": 1519,
-      "distanceCm": 28613724
+      "distanceCm": 28626440
     },
     {
       "name": "FrankiePopoki",
@@ -74,13 +74,13 @@
   "topPlaytime": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 1535094,
+      "playTimeTicks": 1535753,
       "deaths": 260,
       "mobKills": 219,
       "playerKills": 129,
       "blocksMined": 13,
       "blocksPlaced": 1519,
-      "distanceCm": 28613724
+      "distanceCm": 28626440
     },
     {
       "name": "FrankiePopoki",
