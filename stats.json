@@ -1,13 +1,13 @@
 {
-  "updated": "2026-08-02T10:24:08.813816+00:00",
+  "updated": "2026-08-02T11:52:24.737259+00:00",
   "totals": {
-    "playTimeTicks": 2147956,
-    "deaths": 709,
+    "playTimeTicks": 2149061,
+    "deaths": 711,
     "mobKills": 232,
     "playerKills": 268,
     "blocksMined": 56,
     "blocksPlaced": 3084,
-    "distanceCm": 37122976
+    "distanceCm": 37146418
   },
   "players": [
     {
@@ -42,13 +42,13 @@
     },
     {
       "name": "Benson7373",
-      "playTimeTicks": 69469,
-      "deaths": 68,
+      "playTimeTicks": 70574,
+      "deaths": 70,
       "mobKills": 1,
       "playerKills": 63,
       "blocksMined": 5,
       "blocksPlaced": 110,
-      "distanceCm": 1073234
+      "distanceCm": 1096676
     },
     {
       "name": "Luka043",
@@ -104,13 +104,13 @@
     },
     {
       "name": "Benson7373",
-      "playTimeTicks": 69469,
-      "deaths": 68,
+      "playTimeTicks": 70574,
+      "deaths": 70,
       "mobKills": 1,
       "playerKills": 63,
       "blocksMined": 5,
       "blocksPlaced": 110,
-      "distanceCm": 1073234
+      "distanceCm": 1096676
     },
     {
       "name": "Luka043",
