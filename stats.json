@@ -1,13 +1,13 @@
 {
-  "updated": "2026-08-10T20:29:54.790225+00:00",
+  "updated": "2026-08-10T21:30:45.519366+00:00",
   "totals": {
-    "playTimeTicks": 2271910,
-    "deaths": 725,
+    "playTimeTicks": 2328764,
+    "deaths": 726,
     "mobKills": 232,
     "playerKills": 268,
     "blocksMined": 58,
-    "blocksPlaced": 3544,
-    "distanceCm": 38971984
+    "blocksPlaced": 3574,
+    "distanceCm": 43513750
   },
   "players": [
     {
@@ -31,6 +31,16 @@
       "distanceCm": 2689822
     },
     {
+      "name": "Luka043",
+      "playTimeTicks": 115333,
+      "deaths": 66,
+      "mobKills": 1,
+      "playerKills": 13,
+      "blocksMined": 9,
+      "blocksPlaced": 40,
+      "distanceCm": 6199455
+    },
+    {
       "name": "GameMaster187",
       "playTimeTicks": 111553,
       "deaths": 91,
@@ -49,16 +59,6 @@
       "blocksMined": 5,
       "blocksPlaced": 110,
       "distanceCm": 1096676
-    },
-    {
-      "name": "Luka043",
-      "playTimeTicks": 58479,
-      "deaths": 65,
-      "mobKills": 1,
-      "playerKills": 13,
-      "blocksMined": 9,
-      "blocksPlaced": 10,
-      "distanceCm": 1657689
     },
     {
       "name": "ARandomKiddo",
@@ -93,6 +93,16 @@
       "distanceCm": 2689822
     },
     {
+      "name": "Luka043",
+      "playTimeTicks": 115333,
+      "deaths": 66,
+      "mobKills": 1,
+      "playerKills": 13,
+      "blocksMined": 9,
+      "blocksPlaced": 40,
+      "distanceCm": 6199455
+    },
+    {
       "name": "GameMaster187",
       "playTimeTicks": 111553,
       "deaths": 91,
@@ -111,16 +121,6 @@
       "blocksMined": 5,
       "blocksPlaced": 110,
       "distanceCm": 1096676
-    },
-    {
-      "name": "Luka043",
-      "playTimeTicks": 58479,
-      "deaths": 65,
-      "mobKills": 1,
-      "playerKills": 13,
-      "blocksMined": 9,
-      "blocksPlaced": 10,
-      "distanceCm": 1657689
     },
     {
       "name": "ARandomKiddo",
