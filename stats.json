@@ -1,24 +1,24 @@
 {
-  "updated": "2026-08-11T18:44:03.372335+00:00",
+  "updated": "2026-08-11T19:53:24.277818+00:00",
   "totals": {
-    "playTimeTicks": 2673489,
-    "deaths": 728,
+    "playTimeTicks": 2895436,
+    "deaths": 740,
     "mobKills": 232,
-    "playerKills": 268,
-    "blocksMined": 62,
-    "blocksPlaced": 3630,
-    "distanceCm": 44861586
+    "playerKills": 277,
+    "blocksMined": 109,
+    "blocksPlaced": 3684,
+    "distanceCm": 46355226
   },
   "players": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 2156998,
-      "deaths": 281,
+      "playTimeTicks": 2294998,
+      "deaths": 282,
       "mobKills": 219,
-      "playerKills": 129,
+      "playerKills": 135,
       "blocksMined": 15,
-      "blocksPlaced": 1852,
-      "distanceCm": 32877872
+      "blocksPlaced": 1875,
+      "distanceCm": 33458143
     },
     {
       "name": "FrankiePopoki",
@@ -32,13 +32,13 @@
     },
     {
       "name": "Luka043",
-      "playTimeTicks": 116997,
-      "deaths": 66,
+      "playTimeTicks": 200944,
+      "deaths": 77,
       "mobKills": 1,
-      "playerKills": 13,
-      "blocksMined": 12,
-      "blocksPlaced": 40,
-      "distanceCm": 6277520
+      "playerKills": 16,
+      "blocksMined": 59,
+      "blocksPlaced": 71,
+      "distanceCm": 7190889
     },
     {
       "name": "GameMaster187",
@@ -74,13 +74,13 @@
   "topPlaytime": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 2156998,
-      "deaths": 281,
+      "playTimeTicks": 2294998,
+      "deaths": 282,
       "mobKills": 219,
-      "playerKills": 129,
+      "playerKills": 135,
       "blocksMined": 15,
-      "blocksPlaced": 1852,
-      "distanceCm": 32877872
+      "blocksPlaced": 1875,
+      "distanceCm": 33458143
     },
     {
       "name": "FrankiePopoki",
@@ -94,13 +94,13 @@
     },
     {
       "name": "Luka043",
-      "playTimeTicks": 116997,
-      "deaths": 66,
+      "playTimeTicks": 200944,
+      "deaths": 77,
       "mobKills": 1,
-      "playerKills": 13,
-      "blocksMined": 12,
-      "blocksPlaced": 40,
-      "distanceCm": 6277520
+      "playerKills": 16,
+      "blocksMined": 59,
+      "blocksPlaced": 71,
+      "distanceCm": 7190889
     },
     {
       "name": "GameMaster187",
