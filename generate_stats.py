@@ -10,11 +10,6 @@ from pathlib import Path
 # Local cache for resolved names
 NAME_CACHE_FILE = Path("uuid-names.json")
 
-# Minecraft legt jede Fortbewegungsart als eigenen Wert ab, alle enden
-# auf _one_cm: walk, sprint, crouch, swim, fly, aviate (Elytra),
-# minecart, boat, horse, pig, strider, climb, fall und was kuenftig
-# dazukommt. Statt einer festen Liste wird das Suffix ausgewertet,
-# damit neue Versionen automatisch mitgezaehlt werden.
 DISTANCE_SUFFIX = "_one_cm"
 
 
@@ -23,10 +18,6 @@ def count_distance(custom):
     return sum(value for key, value in custom.items()
                if key.endswith(DISTANCE_SUFFIX))
 
-# Minecraft zaehlt gesetzte Bloecke nicht direkt. Die einzige Quelle ist
-# minecraft:used, das jede Item-Benutzung zaehlt. Hier fliegen die
-# offensichtlichen Nicht-Bloecke raus, damit die Zahl nahe an
-# "gesetzte Bloecke" liegt. Eine Naeherung, kein exakter Wert.
 NON_BLOCK_SUFFIXES = (
     "_sword", "_pickaxe", "_axe", "_shovel", "_hoe",
     "_helmet", "_chestplate", "_leggings", "_boots",
@@ -111,7 +102,6 @@ def main():
     world_dir = Path(sys.argv[1])
     out_file = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("stats.json")
 
-    # Paper 1.21+ uses players/stats, aeltere Versionen stats
     stats_dir = None
     for candidate in (world_dir / "players" / "stats", world_dir / "stats", world_dir):
         if candidate.is_dir() and any(candidate.glob("*.json")):
