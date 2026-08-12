@@ -1,34 +1,34 @@
 {
-  "updated": "2026-08-12T20:30:34.941530+00:00",
+  "updated": "2026-08-12T21:33:15.271799+00:00",
   "totals": {
-    "playTimeTicks": 3212640,
-    "deaths": 807,
+    "playTimeTicks": 3321684,
+    "deaths": 1004,
     "mobKills": 235,
-    "playerKills": 299,
+    "playerKills": 311,
     "blocksMined": 140,
-    "blocksPlaced": 4118,
-    "distanceCm": 48177718
+    "blocksPlaced": 4452,
+    "distanceCm": 49810142
   },
   "players": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 2462539,
-      "deaths": 321,
+      "playTimeTicks": 2520336,
+      "deaths": 366,
       "mobKills": 219,
-      "playerKills": 148,
+      "playerKills": 155,
       "blocksMined": 36,
-      "blocksPlaced": 2074,
-      "distanceCm": 34485469
+      "blocksPlaced": 2222,
+      "distanceCm": 35167058
     },
     {
       "name": "Luka043",
-      "playTimeTicks": 350607,
-      "deaths": 105,
+      "playTimeTicks": 401854,
+      "deaths": 257,
       "mobKills": 4,
-      "playerKills": 25,
+      "playerKills": 30,
       "blocksMined": 69,
-      "blocksPlaced": 306,
-      "distanceCm": 7986055
+      "blocksPlaced": 492,
+      "distanceCm": 8936890
     },
     {
       "name": "FrankiePopoki",
@@ -74,23 +74,23 @@
   "topPlaytime": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 2462539,
-      "deaths": 321,
+      "playTimeTicks": 2520336,
+      "deaths": 366,
       "mobKills": 219,
-      "playerKills": 148,
+      "playerKills": 155,
       "blocksMined": 36,
-      "blocksPlaced": 2074,
-      "distanceCm": 34485469
+      "blocksPlaced": 2222,
+      "distanceCm": 35167058
     },
     {
       "name": "Luka043",
-      "playTimeTicks": 350607,
-      "deaths": 105,
+      "playTimeTicks": 401854,
+      "deaths": 257,
       "mobKills": 4,
-      "playerKills": 25,
+      "playerKills": 30,
       "blocksMined": 69,
-      "blocksPlaced": 306,
-      "distanceCm": 7986055
+      "blocksPlaced": 492,
+      "distanceCm": 8936890
     },
     {
       "name": "FrankiePopoki",
