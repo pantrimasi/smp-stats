@@ -1,24 +1,24 @@
 {
-  "updated": "2026-08-13T15:47:06.030140+00:00",
+  "updated": "2026-08-13T16:20:29.390574+00:00",
   "totals": {
-    "playTimeTicks": 3361030,
-    "deaths": 1004,
+    "playTimeTicks": 3433920,
+    "deaths": 1054,
     "mobKills": 235,
-    "playerKills": 311,
-    "blocksMined": 140,
-    "blocksPlaced": 4455,
-    "distanceCm": 49864841
+    "playerKills": 313,
+    "blocksMined": 141,
+    "blocksPlaced": 4480,
+    "distanceCm": 50079594
   },
   "players": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 2550280,
-      "deaths": 366,
+      "playTimeTicks": 2583570,
+      "deaths": 415,
       "mobKills": 219,
       "playerKills": 155,
-      "blocksMined": 36,
-      "blocksPlaced": 2222,
-      "distanceCm": 35209725
+      "blocksMined": 37,
+      "blocksPlaced": 2223,
+      "distanceCm": 35371712
     },
     {
       "name": "Luka043",
@@ -32,13 +32,13 @@
     },
     {
       "name": "FrankiePopoki",
-      "playTimeTicks": 202651,
-      "deaths": 186,
+      "playTimeTicks": 204221,
+      "deaths": 187,
       "mobKills": 3,
-      "playerKills": 15,
+      "playerKills": 17,
       "blocksMined": 20,
-      "blocksPlaced": 1617,
-      "distanceCm": 2689822
+      "blocksPlaced": 1641,
+      "distanceCm": 2718231
     },
     {
       "name": "GameMaster187",
@@ -62,25 +62,25 @@
     },
     {
       "name": "ARandomKiddo",
-      "playTimeTicks": 24118,
+      "playTimeTicks": 62148,
       "deaths": 34,
       "mobKills": 2,
       "playerKills": 0,
       "blocksMined": 0,
       "blocksPlaced": 4,
-      "distanceCm": 443408
+      "distanceCm": 467765
     }
   ],
   "topPlaytime": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 2550280,
-      "deaths": 366,
+      "playTimeTicks": 2583570,
+      "deaths": 415,
       "mobKills": 219,
       "playerKills": 155,
-      "blocksMined": 36,
-      "blocksPlaced": 2222,
-      "distanceCm": 35209725
+      "blocksMined": 37,
+      "blocksPlaced": 2223,
+      "distanceCm": 35371712
     },
     {
       "name": "Luka043",
@@ -94,13 +94,13 @@
     },
     {
       "name": "FrankiePopoki",
-      "playTimeTicks": 202651,
-      "deaths": 186,
+      "playTimeTicks": 204221,
+      "deaths": 187,
       "mobKills": 3,
-      "playerKills": 15,
+      "playerKills": 17,
       "blocksMined": 20,
-      "blocksPlaced": 1617,
-      "distanceCm": 2689822
+      "blocksPlaced": 1641,
+      "distanceCm": 2718231
     },
     {
       "name": "GameMaster187",
@@ -124,13 +124,13 @@
     },
     {
       "name": "ARandomKiddo",
-      "playTimeTicks": 24118,
+      "playTimeTicks": 62148,
       "deaths": 34,
       "mobKills": 2,
       "playerKills": 0,
       "blocksMined": 0,
       "blocksPlaced": 4,
-      "distanceCm": 443408
+      "distanceCm": 467765
     }
   ]
 }
