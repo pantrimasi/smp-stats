@@ -1,56 +1,76 @@
 {
-  "updated": "2026-08-15T11:09:24.748143+00:00",
+  "updated": "2026-08-15T12:14:32.305665+00:00",
   "totals": {
-    "playTimeTicks": 50106,
-    "deaths": 0,
-    "mobKills": 0,
+    "playTimeTicks": 88127,
+    "deaths": 1,
+    "mobKills": 1,
     "playerKills": 0,
-    "blocksMined": 0,
+    "blocksMined": 3,
     "blocksPlaced": 0,
-    "distanceCm": 1701
+    "distanceCm": 1044099
   },
   "players": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 49984,
-      "deaths": 0,
-      "mobKills": 0,
+      "playTimeTicks": 87663,
+      "deaths": 1,
+      "mobKills": 1,
       "playerKills": 0,
       "blocksMined": 0,
       "blocksPlaced": 0,
-      "distanceCm": 1528
+      "distanceCm": 1042441
     },
     {
       "name": "FrankiePopoki",
-      "playTimeTicks": 122,
+      "playTimeTicks": 349,
+      "deaths": 0,
+      "mobKills": 0,
+      "playerKills": 0,
+      "blocksMined": 3,
+      "blocksPlaced": 0,
+      "distanceCm": 1658
+    },
+    {
+      "name": "ARandomKiddo",
+      "playTimeTicks": 115,
       "deaths": 0,
       "mobKills": 0,
       "playerKills": 0,
       "blocksMined": 0,
       "blocksPlaced": 0,
-      "distanceCm": 173
+      "distanceCm": 0
     }
   ],
   "topPlaytime": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 49984,
-      "deaths": 0,
-      "mobKills": 0,
+      "playTimeTicks": 87663,
+      "deaths": 1,
+      "mobKills": 1,
       "playerKills": 0,
       "blocksMined": 0,
       "blocksPlaced": 0,
-      "distanceCm": 1528
+      "distanceCm": 1042441
     },
     {
       "name": "FrankiePopoki",
-      "playTimeTicks": 122,
+      "playTimeTicks": 349,
+      "deaths": 0,
+      "mobKills": 0,
+      "playerKills": 0,
+      "blocksMined": 3,
+      "blocksPlaced": 0,
+      "distanceCm": 1658
+    },
+    {
+      "name": "ARandomKiddo",
+      "playTimeTicks": 115,
       "deaths": 0,
       "mobKills": 0,
       "playerKills": 0,
       "blocksMined": 0,
       "blocksPlaced": 0,
-      "distanceCm": 173
+      "distanceCm": 0
     }
   ]
 }
