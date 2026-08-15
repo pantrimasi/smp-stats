@@ -1,34 +1,44 @@
 {
-  "updated": "2026-08-15T13:21:53.117651+00:00",
+  "updated": "2026-08-15T14:11:13.499659+00:00",
   "totals": {
-    "playTimeTicks": 216253,
-    "deaths": 1,
-    "mobKills": 4,
+    "playTimeTicks": 360889,
+    "deaths": 2,
+    "mobKills": 6,
     "playerKills": 0,
-    "blocksMined": 3,
-    "blocksPlaced": 925,
-    "distanceCm": 3334150
+    "blocksMined": 8,
+    "blocksPlaced": 2384,
+    "distanceCm": 8344299
   },
   "players": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 161825,
+      "playTimeTicks": 216511,
       "deaths": 1,
-      "mobKills": 3,
+      "mobKills": 4,
       "playerKills": 0,
       "blocksMined": 0,
-      "blocksPlaced": 105,
-      "distanceCm": 2934406
+      "blocksPlaced": 109,
+      "distanceCm": 6634512
     },
     {
       "name": "FrankiePopoki",
-      "playTimeTicks": 54313,
+      "playTimeTicks": 114313,
       "deaths": 0,
       "mobKills": 1,
       "playerKills": 0,
-      "blocksMined": 3,
-      "blocksPlaced": 820,
-      "distanceCm": 399744
+      "blocksMined": 8,
+      "blocksPlaced": 2274,
+      "distanceCm": 894638
+    },
+    {
+      "name": "Luka043",
+      "playTimeTicks": 29950,
+      "deaths": 1,
+      "mobKills": 1,
+      "playerKills": 0,
+      "blocksMined": 0,
+      "blocksPlaced": 1,
+      "distanceCm": 815149
     },
     {
       "name": "ARandomKiddo",
@@ -44,23 +54,33 @@
   "topPlaytime": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 161825,
+      "playTimeTicks": 216511,
       "deaths": 1,
-      "mobKills": 3,
+      "mobKills": 4,
       "playerKills": 0,
       "blocksMined": 0,
-      "blocksPlaced": 105,
-      "distanceCm": 2934406
+      "blocksPlaced": 109,
+      "distanceCm": 6634512
     },
     {
       "name": "FrankiePopoki",
-      "playTimeTicks": 54313,
+      "playTimeTicks": 114313,
       "deaths": 0,
       "mobKills": 1,
       "playerKills": 0,
-      "blocksMined": 3,
-      "blocksPlaced": 820,
-      "distanceCm": 399744
+      "blocksMined": 8,
+      "blocksPlaced": 2274,
+      "distanceCm": 894638
+    },
+    {
+      "name": "Luka043",
+      "playTimeTicks": 29950,
+      "deaths": 1,
+      "mobKills": 1,
+      "playerKills": 0,
+      "blocksMined": 0,
+      "blocksPlaced": 1,
+      "distanceCm": 815149
     },
     {
       "name": "ARandomKiddo",
