@@ -1,7 +1,7 @@
 {
-  "updated": "2026-08-16T19:13:09.739519+00:00",
+  "updated": "2026-08-16T20:09:06.032169+00:00",
   "totals": {
-    "playTimeTicks": 1165691,
+    "playTimeTicks": 1187629,
     "deaths": 34,
     "mobKills": 10,
     "playerKills": 4,
@@ -12,7 +12,7 @@
   "players": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 630009,
+      "playTimeTicks": 651947,
       "deaths": 16,
       "mobKills": 8,
       "playerKills": 4,
@@ -54,7 +54,7 @@
   "topPlaytime": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 630009,
+      "playTimeTicks": 651947,
       "deaths": 16,
       "mobKills": 8,
       "playerKills": 4,
