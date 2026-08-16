@@ -1,24 +1,24 @@
 {
-  "updated": "2026-08-16T08:15:00.806412+00:00",
+  "updated": "2026-08-16T09:15:56.364732+00:00",
   "totals": {
-    "playTimeTicks": 637736,
-    "deaths": 18,
+    "playTimeTicks": 687680,
+    "deaths": 19,
     "mobKills": 8,
     "playerKills": 4,
     "blocksMined": 9,
-    "blocksPlaced": 4147,
-    "distanceCm": 10573161
+    "blocksPlaced": 4167,
+    "distanceCm": 11032354
   },
   "players": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 295459,
-      "deaths": 6,
+      "playTimeTicks": 345403,
+      "deaths": 7,
       "mobKills": 6,
       "playerKills": 4,
       "blocksMined": 1,
-      "blocksPlaced": 314,
-      "distanceCm": 8062680
+      "blocksPlaced": 334,
+      "distanceCm": 8521873
     },
     {
       "name": "Luka043",
@@ -54,13 +54,13 @@
   "topPlaytime": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 295459,
-      "deaths": 6,
+      "playTimeTicks": 345403,
+      "deaths": 7,
       "mobKills": 6,
       "playerKills": 4,
       "blocksMined": 1,
-      "blocksPlaced": 314,
-      "distanceCm": 8062680
+      "blocksPlaced": 334,
+      "distanceCm": 8521873
     },
     {
       "name": "Luka043",
