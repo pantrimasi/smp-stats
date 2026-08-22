@@ -1,44 +1,44 @@
 {
-  "updated": "2026-08-22T19:14:47.376665+00:00",
+  "updated": "2026-08-22T20:09:59.231024+00:00",
   "totals": {
-    "playTimeTicks": 2217657,
+    "playTimeTicks": 2417471,
     "deaths": 44,
-    "mobKills": 50,
+    "mobKills": 83,
     "playerKills": 4,
     "blocksMined": 19,
-    "blocksPlaced": 16875,
-    "distanceCm": 35090017
+    "blocksPlaced": 19912,
+    "distanceCm": 36410203
   },
   "players": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 1453090,
+      "playTimeTicks": 1520560,
       "deaths": 16,
-      "mobKills": 24,
+      "mobKills": 34,
       "playerKills": 4,
       "blocksMined": 2,
-      "blocksPlaced": 10666,
-      "distanceCm": 24590563
+      "blocksPlaced": 12260,
+      "distanceCm": 25090395
     },
     {
       "name": "FrankiePopoki",
-      "playTimeTicks": 481250,
+      "playTimeTicks": 547594,
       "deaths": 5,
-      "mobKills": 25,
+      "mobKills": 48,
       "playerKills": 0,
       "blocksMined": 10,
-      "blocksPlaced": 5657,
-      "distanceCm": 8338147
+      "blocksPlaced": 6365,
+      "distanceCm": 8770413
     },
     {
       "name": "Luka043",
-      "playTimeTicks": 274445,
+      "playTimeTicks": 340445,
       "deaths": 23,
       "mobKills": 1,
       "playerKills": 0,
       "blocksMined": 7,
-      "blocksPlaced": 552,
-      "distanceCm": 2093528
+      "blocksPlaced": 1287,
+      "distanceCm": 2481616
     },
     {
       "name": "Thanato_phoros",
@@ -64,33 +64,33 @@
   "topPlaytime": [
     {
       "name": "PantriMasi",
-      "playTimeTicks": 1453090,
+      "playTimeTicks": 1520560,
       "deaths": 16,
-      "mobKills": 24,
+      "mobKills": 34,
       "playerKills": 4,
       "blocksMined": 2,
-      "blocksPlaced": 10666,
-      "distanceCm": 24590563
+      "blocksPlaced": 12260,
+      "distanceCm": 25090395
     },
     {
       "name": "FrankiePopoki",
-      "playTimeTicks": 481250,
+      "playTimeTicks": 547594,
       "deaths": 5,
-      "mobKills": 25,
+      "mobKills": 48,
       "playerKills": 0,
       "blocksMined": 10,
-      "blocksPlaced": 5657,
-      "distanceCm": 8338147
+      "blocksPlaced": 6365,
+      "distanceCm": 8770413
     },
     {
       "name": "Luka043",
-      "playTimeTicks": 274445,
+      "playTimeTicks": 340445,
       "deaths": 23,
       "mobKills": 1,
       "playerKills": 0,
       "blocksMined": 7,
-      "blocksPlaced": 552,
-      "distanceCm": 2093528
+      "blocksPlaced": 1287,
+      "distanceCm": 2481616
     },
     {
       "name": "Thanato_phoros",
